@@ -74,6 +74,7 @@ public class CarController : MonoBehaviour
     //add force if car is grounded
     private void FixedUpdate()
     {
+        //move if on ground
         if (isCarGrounded)
             sphereRB.AddForce(transform.forward * moveInput, ForceMode.Acceleration); // Add Movement
         else

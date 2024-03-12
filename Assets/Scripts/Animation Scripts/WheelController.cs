@@ -35,6 +35,7 @@ public class WheelController : MonoBehaviour
         }
 
         //set animation for turning
+        #region wheel turning animation
         if (horizontalAxis > 0)
         {
             //turning right
@@ -53,6 +54,7 @@ public class WheelController : MonoBehaviour
             anim.SetBool("goingRight", false);
             anim.SetBool("goingLeft", false);
         }
+        #endregion
 
         //emit trails if car is moving l or r - or if car is moving slow
         if (horizontalAxis != 0 || carController.carSpeed < 10f)
