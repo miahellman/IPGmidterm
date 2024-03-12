@@ -5,19 +5,18 @@ using TMPro;
 
 public class ModifyUI : MonoBehaviour
 {
+    public GameManager gameManager;
     public CarController carController;
+    public CollisionFX collisionFX;
 
     [SerializeField] TextMeshProUGUI mphText;
     [SerializeField] TextMeshProUGUI timeText;
+    [SerializeField] TextMeshProUGUI lapsText;
+    [SerializeField] TextMeshProUGUI pauseText;
 
-    private float timeElapsed = 0f;
+    public float timeElapsed = 0f;
     private float speed = 0f;
     
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()
@@ -36,12 +35,17 @@ public class ModifyUI : MonoBehaviour
             speed = carController.carSpeed; // If car speed is 0, set speed to 0
         }
 
+        //update text to show game is paused if paused is true
+        pauseText.text = gameManager.gamePaused ? "PAUSED" : "";
 
-        mphText.text = speed.ToString("F0") + " MPH";
+        //update text if paused don't show text, else show text
+        mphText.text = gameManager.gamePaused ? "" : speed.ToString("F0") + " MPH";
 
-        timeElapsed += Time.deltaTime / 60f;
+        timeElapsed += Time.deltaTime;
 
-        timeText.text = "LAP TIME: " + timeElapsed.ToString("F2");
+        timeText.text = gameManager.gamePaused ? "" : "TOTAL TIME: " + timeElapsed.ToString("F0") + " S";
+
+        lapsText.text = gameManager.gamePaused ? "" : "LAPS: " + collisionFX.totalLaps.ToString("F0") + "/" + collisionFX.maxLaps.ToString();
         
     }
 }

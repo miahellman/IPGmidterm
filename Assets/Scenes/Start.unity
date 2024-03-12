@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.15408045, g: 0.17535266, b: 0.18634239, a: 1}
+  m_IndirectSpecularColor: {r: 0.15872213, g: 0.18299618, b: 0.20017579, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -276,8 +276,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.0000019073, y: 113}
-  m_SizeDelta: {x: 278.078, y: 46.729}
+  m_AnchoredPosition: {x: 1.14e-13, y: 126.9}
+  m_SizeDelta: {x: 278.078, y: 70.737}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &344439485
 MonoBehaviour:
@@ -299,7 +299,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: RACING GAME
+  m_text: 'HOT WHEELS
+
+    DRIVING SIM'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -326,7 +328,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 35.65
+  m_fontSize: 31.2
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -899,13 +901,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1742506712}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.96331596, y: 0.20995256, z: 0.15135054, w: -0.07096042}
+  m_LocalRotation: {x: -0.013320717, y: 0.16908395, z: -0.19595356, w: -0.9658341}
   m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 4.196, y: -161.201, z: 205.285}
+  m_LocalEulerAnglesHint: {x: 5.278, y: -18.83, z: 382.062}
 --- !u!1 &1747623564
 GameObject:
   m_ObjectHideFlags: 0
@@ -966,6 +968,7 @@ GameObject:
   - component: {fileID: 2023383193}
   - component: {fileID: 2023383192}
   - component: {fileID: 2023383191}
+  - component: {fileID: 2023383195}
   - component: {fileID: 2023383194}
   m_Layer: 0
   m_Name: Main Camera
@@ -1108,6 +1111,19 @@ MonoBehaviour:
   m_BeforeTransparentBundles: []
   m_BeforeStackBundles: []
   m_AfterStackBundles: []
+--- !u!114 &2023383195
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2023383190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1caff7f4b5b4a424f8b9094b9990cdcb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  effectMaterial: {fileID: 2100000, guid: 0e884c56adf9eb44ca98319272948d2f, type: 2}
 --- !u!4 &4895519689611542
 Transform:
   m_ObjectHideFlags: 0
@@ -1418,7 +1434,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: df92f1750bf76404b853cbe05136ba49, type: 2}
+  - {fileID: 2100000, guid: 9b1c35259ab732948b701531c5ae4f07, type: 2}
   - {fileID: -3846018093981099296, guid: 4659d439a0833744f87828d1aa158f6b, type: 3}
   - {fileID: 1886820026795636259, guid: 4659d439a0833744f87828d1aa158f6b, type: 3}
   - {fileID: 9185737683893222716, guid: 4659d439a0833744f87828d1aa158f6b, type: 3}
@@ -2090,6 +2106,67 @@ Transform:
   - {fileID: 3099910315704327825}
   m_Father: {fileID: 8526351784542773097}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &7127146719496619310
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 507429065956268059, guid: e04511faf0955c84ba06f2785f0edc0c, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2579704214723351730, guid: e04511faf0955c84ba06f2785f0edc0c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.9696279
+      objectReference: {fileID: 0}
+    - target: {fileID: 2579704214723351730, guid: e04511faf0955c84ba06f2785f0edc0c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4.8652525
+      objectReference: {fileID: 0}
+    - target: {fileID: 2579704214723351730, guid: e04511faf0955c84ba06f2785f0edc0c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 160.97858
+      objectReference: {fileID: 0}
+    - target: {fileID: 2579704214723351730, guid: e04511faf0955c84ba06f2785f0edc0c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2579704214723351730, guid: e04511faf0955c84ba06f2785f0edc0c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2579704214723351730, guid: e04511faf0955c84ba06f2785f0edc0c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2579704214723351730, guid: e04511faf0955c84ba06f2785f0edc0c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2579704214723351730, guid: e04511faf0955c84ba06f2785f0edc0c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2579704214723351730, guid: e04511faf0955c84ba06f2785f0edc0c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2579704214723351730, guid: e04511faf0955c84ba06f2785f0edc0c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5551580750856485934, guid: e04511faf0955c84ba06f2785f0edc0c, type: 3}
+      propertyPath: m_Name
+      value: AudioManager
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e04511faf0955c84ba06f2785f0edc0c, type: 3}
 --- !u!4 &7156909408649032254
 Transform:
   m_ObjectHideFlags: 0
@@ -7326,3 +7403,4 @@ SceneRoots:
   - {fileID: 1747623566}
   - {fileID: 1688215559}
   - {fileID: 8919650664415879155}
+  - {fileID: 7127146719496619310}

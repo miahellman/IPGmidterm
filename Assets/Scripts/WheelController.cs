@@ -9,9 +9,9 @@ public class WheelController : MonoBehaviour
 
     [Header("effects")]
     public TrailRenderer[] trails;
-    public ParticleSystem smoke;
 
     [Header("movement")]
+    public CarController carController;
     public float rotationSpeed;
     private Animator anim;
 
@@ -24,14 +24,17 @@ public class WheelController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //get input from player
         float verticalAxis = Input.GetAxisRaw("Vertical");
         float horizontalAxis = Input.GetAxisRaw("Horizontal");
 
+        //for each wheel in the array, rotate the wheel
         foreach (var wheel in wheelsToRotate)
         {
             wheel.transform.Rotate(0, 0, Time.deltaTime * verticalAxis * rotationSpeed, Space.Self);
         }
 
+        //set animation for turning
         if (horizontalAxis > 0)
         {
             //turning right
@@ -51,15 +54,14 @@ public class WheelController : MonoBehaviour
             anim.SetBool("goingLeft", false);
         }
 
-        if (horizontalAxis != 0)
+        //emit trails if car is moving l or r - or if car is moving slow
+        if (horizontalAxis != 0 || carController.carSpeed < 10f)
         {
             foreach (var trail in trails)
             {
                 trail.emitting = true;
             }
 
-            var emission = smoke.emission;
-            emission.rateOverTime = 5f;
         }
         else
         {
@@ -68,8 +70,6 @@ public class WheelController : MonoBehaviour
                 trail.emitting = false;
             }
 
-            var emission = smoke.emission;
-            emission.rateOverTime = 0f;
         }
     }
 }

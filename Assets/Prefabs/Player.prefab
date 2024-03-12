@@ -213,7 +213,7 @@ TrailRenderer:
     colorGradient:
       serializedVersion: 2
       key0: {r: 0, g: 0, b: 0, a: 1}
-      key1: {r: 0, g: 0, b: 0, a: 0}
+      key1: {r: 0, g: 0, b: 0, a: 0.654902}
       key2: {r: 0, g: 0, b: 0, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
       key4: {r: 0, g: 0, b: 0, a: 0}
@@ -229,8 +229,8 @@ TrailRenderer:
       ctime6: 0
       ctime7: 0
       atime0: 0
-      atime1: 65535
-      atime2: 0
+      atime1: 37297
+      atime2: 65535
       atime3: 0
       atime4: 0
       atime5: 0
@@ -239,7 +239,7 @@ TrailRenderer:
       m_Mode: 0
       m_ColorSpace: 0
       m_NumColorKeys: 2
-      m_NumAlphaKeys: 2
+      m_NumAlphaKeys: 3
     numCornerVertices: 0
     numCapVertices: 0
     alignment: 0
@@ -560,7 +560,7 @@ TrailRenderer:
     colorGradient:
       serializedVersion: 2
       key0: {r: 0, g: 0, b: 0, a: 1}
-      key1: {r: 0, g: 0, b: 0, a: 0}
+      key1: {r: 0, g: 0, b: 0, a: 0.654902}
       key2: {r: 0, g: 0, b: 0, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
       key4: {r: 0, g: 0, b: 0, a: 0}
@@ -575,9 +575,9 @@ TrailRenderer:
       ctime5: 0
       ctime6: 0
       ctime7: 0
-      atime0: 386
-      atime1: 65535
-      atime2: 0
+      atime0: 0
+      atime1: 37297
+      atime2: 65535
       atime3: 0
       atime4: 0
       atime5: 0
@@ -586,7 +586,7 @@ TrailRenderer:
       m_Mode: 0
       m_ColorSpace: 0
       m_NumColorKeys: 2
-      m_NumAlphaKeys: 2
+      m_NumAlphaKeys: 3
     numCornerVertices: 0
     numCapVertices: 0
     alignment: 0
@@ -826,7 +826,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ec74923488a7794fa43fc46be013068, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 0}
   hitEffectPrefab: {fileID: 8171587682061113150, guid: 5b6dc2594d85fcc409efe8f01620b96e, type: 3}
+  startLine: {fileID: 0}
+  finishLine: {fileID: 0}
+  lapTimer: 0
+  totalLaps: 0
 --- !u!1 &2975888586968171959
 GameObject:
   m_ObjectHideFlags: 0
@@ -1082,7 +1087,7 @@ MonoBehaviour:
   trails:
   - {fileID: 3831286373704888263}
   - {fileID: 1313679252736962587}
-  smoke: {fileID: 0}
+  carController: {fileID: 0}
   rotationSpeed: 1000
 --- !u!95 &5861576146520172630
 Animator:

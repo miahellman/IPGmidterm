@@ -36,7 +36,6 @@ public class CarController : MonoBehaviour
         sphereRB.transform.parent = null;
         carRB.transform.parent = null;
         
-
         normalDrag = sphereRB.drag;
     }
 
@@ -72,6 +71,7 @@ public class CarController : MonoBehaviour
         carSpeed = Mathf.Abs(moveInput/4f);
     }
 
+    //add force if car is grounded
     private void FixedUpdate()
     {
         if (isCarGrounded)
@@ -81,7 +81,7 @@ public class CarController : MonoBehaviour
 
         carRB.MoveRotation(transform.rotation); // Move Car to match sphere
 
-        //when braking, disable brake box asset, else enable it
+        //when braking, disable brake box asset
         if (moveInput > 0 || moveInput < 0)
         {
             brakeBox.SetActive(false);
