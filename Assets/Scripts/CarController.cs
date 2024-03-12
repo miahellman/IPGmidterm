@@ -69,7 +69,7 @@ public class CarController : MonoBehaviour
         // Calculate Drag
         sphereRB.drag = isCarGrounded ? normalDrag : modifiedDrag;
 
-        carSpeed = moveInput/4f;
+        carSpeed = Mathf.Abs(moveInput/4f);
     }
 
     private void FixedUpdate()
