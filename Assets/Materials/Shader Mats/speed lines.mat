@@ -30,6 +30,6 @@ Material:
     m_Ints: []
     m_Floats:
     - _intensity: 0.13
-    - _lineIntensity: 0.01
+    - _lineIntensity: 0.18
     m_Colors: []
   m_BuildTextureStacks: []
