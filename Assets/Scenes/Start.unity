@@ -299,7 +299,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'HOT WHEELS
+  m_text: '* ARCADE *
 
     DRIVING SIM'
   m_isRightToLeft: 0
